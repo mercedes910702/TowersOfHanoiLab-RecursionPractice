@@ -1,0 +1,21 @@
+public class TowersofHanoi 
+{
+public static void moveDisks(int from, int to, int aux,int numDisks)
+{
+if(numDisks == 1)
+{
+System.out.println("Move Peg " + from + " to Peg " + to + " ");
+}
+else
+{
+moveDisks(from, aux, to, numDisks - 1);
+moveDisks(from, to, aux, 1);
+moveDisks(aux, to, from, numDisks - 1);
+}
+}
+public static void main(String[] args)
+{
+moveDisks(1,3,2,3);
+
+}
+}
